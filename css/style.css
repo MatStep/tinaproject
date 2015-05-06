@@ -1,0 +1,43 @@
+/*Stylesheets TINA*/
+
+html {
+	font-family: 'Roboto', Helvetica, Arial,sans-serif;
+	position:relative;
+	min-height: 100%;
+}
+
+body {
+	margin-bottom:100px;
+}
+
+/*Content start*/
+body > .container {
+	padding: 60px 15px 0;
+}
+/*Content end*/
+
+/*Footer start*/
+.footer-text {
+	color:#EFEFE6;
+	font-size:18px;
+}
+
+footer .footer-text {
+	margin: 20px 0;
+}
+
+footer > .container {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+footer {
+		text-align: center;
+		position:absolute;
+		width:100%;
+		height:100px;
+		color:#FBFBFB;
+		background: #30302E;
+		bottom:0;
+}
+/* Footer end */
