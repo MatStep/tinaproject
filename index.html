@@ -8,6 +8,8 @@
 	</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="./css/style.css"/>
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
@@ -15,8 +17,24 @@
 	<header>
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Some awesome text</a>
+				</div>
 				<div id="navbar" class="collapse navbar-collapse">
-				Tu bude menu
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#">Domov</a>
+						</li>
+						<li>
+							<a href="#">Naše práce</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</nav>
