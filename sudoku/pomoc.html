@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sudoku</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<script src="sudoku.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Pravidlá:</a>
+					</div>
+					<div id="navbar" class="collapse navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="sudoku.html">Späť</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="container">
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4">
+					<p>- v každom riadku, stĺpci a štvorci musí byť postupnosť 1..9</p>
+					<p>- čísla v riadku, stĺpci a štvorci sa nesmú opakovať</p>
+					<p>- za správne umiestnené číslo hráč získava 3 body</p>
+					<p>- za nesprávne umiestnené číslo hráč stráca 1 bod</p>
+					<p>- číslo najskôr treba vybrať z dolného panelu s číslami a potom vkladať</p>
+			</div>
+			<div class="col-md-4">
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				<p class="footer-text">Rastislav Páleník</p>
+			</div>
+		</footer>
+	</body>
+</html>
