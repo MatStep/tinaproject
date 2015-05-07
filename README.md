@@ -1,8 +1,8 @@
 # tinaproject
 School project
 
-Podadresare
-/www - .html podstranky
+Podadresáre
+/www - .html podstránky
 /scripts - skripty
-/css - css subory style.css moze byt vsetko spolu
-/images - obrazky
+/css - css súbory style.css môže byť všetko spolu v jednom
+/images - obrázky
