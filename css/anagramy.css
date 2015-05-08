@@ -17,6 +17,7 @@ http://www.wildtextures.com/free-textures/vertical-wooden-floor-texture/
     background-image: url("../images/wood-texture.jpg");
     background-size: 100%;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .containerLetters{
@@ -137,7 +138,7 @@ button{
     transform: rotate(10deg);
     width: 162px;
     height: 168px;
-    top: -200px;
+    /*top: -200px;*/
     cursor: pointer;
 }
 
@@ -151,7 +152,7 @@ button{
     width: 162px;
     height: 84px;
     line-height: 80px;
-    top: -150px;
+    /*top: -150px;*/
 }
 
 #solution{
@@ -163,7 +164,9 @@ button{
     transform: rotate(-13deg);
     width: 162px;
     height: 100px;
-    top: -230px;
+    position: absolute;
+    left: -150px;
+    /*top: -230px;*/
     line-height: 40px;
     display: none;
 }
@@ -250,4 +253,3 @@ button{
 .axis text {
   font-size: 10px;
 }
-

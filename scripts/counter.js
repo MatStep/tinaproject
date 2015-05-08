@@ -38,7 +38,7 @@ function insertCounter() {
  displayCounter();
 }
  function displayCounter() {
- document.write('<H3 ALIGN="CENTER">');
+ document.write('<H5 ALIGN="RIGHT">');
  document.write("Navštívil si túto stránku ");
  if(counter==1)
      document.write("po prvý krát.");

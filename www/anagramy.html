@@ -57,19 +57,26 @@
                         <div class="containerLetters" id="draggablePile"></div>
                         <div class="clear"></div>
                         <div class="containerLetters" id="droppablePile"></div>
-                        <div class="buttonPanel">
-                            <button id="buttonReset">RESET</button>
-                            <div class="clear"></div>
-                            <button class="backButton" id="back">&lt;</button>
-                            <button class="forwardButton" id="forward">&GT;</button>
-                            <div class="clear"></div>
-                            <button id="buttonSolution">Riešenie</button>
-                            <button id="aboutStart">O hre</button>
-                            <button class="makeGraph">Graf</button>
+                        <div class="clearfix"></div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="note" id="score">Score: 0</div>
+                            </div>
+                             <div class="buttonPanel col-xs-6">
+                                <button id="buttonReset">RESET</button>
+                                <div class="clear"></div>
+                                <button class="backButton" id="back">&lt;</button>
+                                <button class="forwardButton" id="forward">&GT;</button>
+                                <div class="clear"></div>
+                                <button id="buttonSolution">Riešenie</button>
+                                <button id="aboutStart">O hre</button>
+                                <button class="makeGraph">Graf</button>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="note" id="help">Zobraz nápovedu</div>
+                                <div class="note" id="solution"></div>
+                            </div>
                         </div>
-                        <div class="note" id="score">Score: 0</div>
-                        <div class="note" id="help">Zobraz nápovedu</div>
-                        <div class="note" id="solution"></div>
                         <div class="topLayer" id="aboutPanel">
                             <div class="note" id="about">Pravidlá: Správne vylúštite dané anagramy potiahnutím písmen na ich novú pozíciu v lište pod nimi. Slová, ktoré ste už vylúštili sa Vám už nebudú ukazovať.<br/>
                             Vyriešenie slova: +30b<br/>Použitie nápovedy: -3b<br/>Použitie reset tlačidla: -5b<br/>Zobrazenie výsledku: 0b za slovo po vyriešení</div>
