@@ -2,7 +2,7 @@
 	 #googleMap{
 	 	 display:none;
          width: 100%;
-         height: 80%;
+         height: 90%;
     }
     #map_wrapper{
     	height: 600px;
@@ -42,7 +42,7 @@
 	}
 
 	#map_wrapper{
-		min-height:600px;
+		min-height:500px;
 	}
 	#hodnotenie{
 		font-weight: normal;

@@ -185,8 +185,7 @@ $(document).ready(function(){
 	      	]
 	    };
 
-	    
-	    
+	   
 	    //instances of maps in html
 	    map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 	    
@@ -262,7 +261,7 @@ $(document).ready(function(){
 			boolClick = false;
 			google.maps.event.clearListeners(map, 'click');
 			createMarker(bodY,bodX,true);
-			
+			//changeMapPosition(bodY,bodX);
 		}
 		canEnter = true;
 	}
@@ -559,6 +558,11 @@ $(document).ready(function(){
 	  markers = [];
 	}
 
+	function changeMapPosition(x,y){
+		var latlng = new google.maps.LatLng(x,y);
+		map.set('center', latlng);
+	}
+
 	function ohodnot(){
 		switch(true){
 			case(points>=0): $("#hodnotenie").text("Že si len tipoval ? :)");
@@ -568,11 +572,6 @@ $(document).ready(function(){
 			case (points >= 8000): $("#hodnotenie").text("Wow, ty musíš byť geograf");break;
 		}
 	}
-
-
-
-	
-	
 	
 
 	function makeGraph() {
