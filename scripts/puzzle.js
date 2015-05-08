@@ -1,6 +1,6 @@
 // Puzzle JavaScript
 
-const NUM_PIECES = 8;
+var NUM_PIECES = 8;
 
 var points = 0;
 var kraje = 0;

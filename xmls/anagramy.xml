@@ -29,7 +29,7 @@
 	</uloha>
 	<uloha>
 		<zadanie>dietne plesnivý</zadanie>
-		<napoveda>.dog{display: none}</napoveda>
+		<napoveda>.dog{ visibility: hidden }</napoveda>
                 <riesenie>neviditelný pes</riesenie>       
 	</uloha> 
 	<uloha>

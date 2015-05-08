@@ -1,63 +1,66 @@
-﻿ //http://www.comptechdoc.org/independent/web/cgi/javamanual/javaihit.html
+//http://www.comptechdoc.org/independent/web/cgi/javamanual/javaihit.html
  function nameDefined(ckie,nme)
 {
-   var splitValues
-   var i
+   var splitValues;
+   var i;
    for (i=0;i<ckie.length;++i)
    {
-      splitValues=ckie[i].split("=")
-      if (splitValues[0]==nme) return true
+      splitValues=ckie[i].split("=");
+      if (splitValues[0] == nme) return true;
    }
-   return false
+   return false;
 }
 
 function delBlanks(strng)
 {
-   var result=""
-   var i
-   var chrn
-   for (i=0;i<strng.length;++i) {
-      chrn=strng.charAt(i)
-      if (chrn!=" ") result += chrn
+   var result="";
+   var i;
+   var chrn;
+   for (i = 0; i < strng.length; ++i) {
+      chrn=strng.charAt(i);
+      if (chrn != " ") result += chrn;
    }
-   return result
+   return result;
 }
 function getCookieValue(ckie,nme)
 {
-   var splitValues
-   var i
-   for(i=0;i<ckie.length;++i) {
-      splitValues=ckie[i].split("=")
-      if(splitValues[0]==nme) return splitValues[1]
+   var splitValues;
+   var i;
+   for(i=0; i<ckie.length; ++i) {
+      splitValues = ckie[i].split("=");
+      if(splitValues[0] == nme) 
+          return splitValues[1];
    }
-   return ""
+   return "";
 }
 function insertCounter() {
- readCookie()
- displayCounter()
+ readCookie();
+ displayCounter();
 }
  function displayCounter() {
- document.write('<H3 ALIGN="CENTER">')
- document.write("Navštívil si túto stránku ")
- if(counter==1) document.write("po prvý krát.")
- else document.write(counter+" krát.")
- document.writeln('</H3>')
+ document.write('<H3 ALIGN="CENTER">');
+ document.write("Navštívil si túto stránku ");
+ if(counter==1)
+     document.write("po prvý krát.");
+ else
+     document.write(counter+" krát.");
+    document.writeln('</H2>');
  }
 function readCookie() {
- var cookie=document.cookie
- counter=0
- var chkdCookie=delBlanks(cookie)  //are on the client computer
- var nvpair=chkdCookie.split(";")
- if(nameDefined(nvpair,"pageCount"))
- counter=parseInt(getCookieValue(nvpair,"pageCount"))
- ++counter
- var futdate = new Date()
- var expdate = futdate.getTime()
- expdate += 3600000 * 24 *30  //expires in 1 hour
- futdate.setTime(expdate)
+ var cookie=document.cookie;
+ counter = 0;
+ var chkdCookie=delBlanks(cookie);  //are on the client computer
+ var nvpair=chkdCookie.split(";");
+ if(nameDefined(nvpair,"pageCount"));
+ counter=parseInt(getCookieValue(nvpair,"pageCount"));
+ ++counter;
+ var futdate = new Date();
+ var expdate = futdate.getTime();
+ expdate += 3600000 * 24 *30;  //expires in 1 hour
+ futdate.setTime(expdate);
 
- var newCookie="pageCount="+counter
- newCookie += "; expires=" + futdate.toGMTString()
- window.document.cookie=newCookie
+ var newCookie = "pageCount=" + counter;
+ newCookie += "; expires=" + futdate.toGMTString();
+ window.document.cookie = newCookie;
 }
-// -->
+
