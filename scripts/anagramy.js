@@ -132,7 +132,8 @@ function init(){
     
     hideSolution();
     hideHelp();
-    $(".forwardButton").show();
+    
+    $(".forwardButton").css("visibility", "visible");
     
 }
 
