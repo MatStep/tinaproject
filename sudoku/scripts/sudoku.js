@@ -1,9 +1,12 @@
-var xmlDoc = loadXMLDoc("sudoku.xml");
+var xmlDoc = loadXMLDoc("../xmls/sudoku.xml");
 
 function play_game() {
 	var rand = Math.floor((Math.random() * 5));
 	create_game(xmlDoc, rand);
 	print_matrix();
+	document.getElementById("points").innerHTML = "0";
+	document.getElementById("light").innerHTML = "";
+	document.getElementById("light").bgColor = "white";
 }
 
 function loadXMLDoc(filename)
