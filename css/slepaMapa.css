@@ -30,8 +30,6 @@
 		margin-top: 20px;
 	}
 
-	
-
 	.velke_a_tucne{
 		font-size:1.4em;
 		font-weight: bold;
@@ -46,4 +44,9 @@
 	}
 	#hodnotenie{
 		font-weight: normal;
+	}
+
+	#plusScore{
+		font-size: 1.4em;
+		color:#090A3B;
 	}
