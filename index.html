@@ -13,6 +13,7 @@
         <script type="text/javascript" src="scripts/breadcrumbs.js"></script>
 	<link type="text/css" rel="stylesheet" href="./css/style.css"/>
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<script src="scripts/counter.js"></script>
 </head>
 <body>
 	<header>
@@ -30,17 +31,17 @@
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li class="active">
-							<a href="#">Domov</a>
+							<a href="index.html">Domov</a>
 						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Naše práce</a>
-                                                         <ul class="dropdown-menu" role="menu">
-                                                            <li><a href="www/anagramy.html">Anagramy</a></li>
-                                                            <li><a href="#">Krížovky</a></li>
-                                                            <li><a href="#">Puzzle</a></li>
-                                                            <li><a href="#">Slepá mapa</a></li>
-                                                            <li><a href="www/sudoku.html">Sudoku</a></li>
-                                                        </ul>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="www/anagramy.html">Anagramy</a></li>
+								<li><a href="#">Krížovky</a></li>
+								<li><a href="www/puzzle.html">Puzzle</a></li>
+								<li><a href="#">Slepá mapa</a></li>
+								<li><a href="www/sudoku.html">Sudoku</a></li>
+							</ul>
 						</li>
 					</ul>
 				</div>
@@ -59,9 +60,7 @@
 	<footer>
 		<div class="container">
 			<p class="footer-text">Tu bude footer</p>
-				<a href="http://www.hitwebcounter.com/countersiteservices.php" target="_blank">
-					<img src="http://hitwebcounter.com/counter/counter.php?page=6061128&style=0005&nbdigits=5&type=page&initCount=0" title="good hits" Alt="good hits"   border="0" >
-				</a><br/> 
+			<script>insertCounter();</script>
 		</div>
 	</footer>
 </body>

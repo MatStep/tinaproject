@@ -1,0 +1,76 @@
+/*Puzzle CSS*/
+
+body {
+	background: url('../images/furley_bg.png');
+}
+
+.draggable, .notdraggable {
+	position:absolute;
+}
+
+.dropzone {
+	margin-top:150px;
+}
+
+#graphShow {
+	display:none;
+	float:left;
+}
+
+#help {
+	display:none;
+}
+
+#button3 {
+	float:right;
+}
+
+.bg-warning {
+	line-height: 3;
+	padding-left: 20px;
+}
+
+.bar {
+	fill:#1975D1;
+}
+
+.bar:hover {
+	fill:#0F467D;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke:#000;
+	shape-rendering: crispEdges;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+#endGame {
+	font-size:20px;
+}
