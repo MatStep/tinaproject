@@ -12,8 +12,7 @@ http://www.wildtextures.com/free-textures/vertical-wooden-floor-texture/
 
 .game{
     position: relative;
-/*    width: 80%;
-    height: 80%;*/
+    min-width: 1000px;
     min-height: 500px;
     background-image: url("../images/wood-texture.jpg");
     background-size: 100%;
