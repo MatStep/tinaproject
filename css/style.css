@@ -47,6 +47,10 @@ body {
     color:#F0F0F0;
 }
 
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+    background-color: #E0E0E0;
+}
+
 .dropdown-menu > li > a {
     color: #F0F0F0;
     text-transform:uppercase;
