@@ -47,12 +47,8 @@ body {
     color:#F0F0F0;
 }
 
-.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #F0F0F0;
-}
-
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
-    color: #E4E4E4;
+    background-color: #E0E0E0;
 }
 
 .dropdown-menu > li > a {
