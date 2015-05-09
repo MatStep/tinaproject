@@ -1,19 +1,6 @@
 /*http://www.w3schools.com/Html/html5_webstorage.asp
- * http://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage*/
-
-
-    
-function createBreadcrumbs(links){
-    var tags = "";
-    for(var i= 0; i<links.length; i++){
-        tags = tags + "<li><a href= " + links[i].link + ">" + links[i].nazov + "</a></li>";
-    }
-    $(".breadcrumb").html(tags);
-    var lastLi = $(".breadcrumb").find("li").last();
-    lastLi.addClass("active");
-    var lastLiText = $(".breadcrumb").find("a").last().text();
-    lastLi.html(lastLiText);
-}
+ * http://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage
+ */
 
 
 $(document).ready(function(){
@@ -38,3 +25,17 @@ $(document).ready(function(){
     }
     createBreadcrumbs(linksCollection);
 });
+
+function createBreadcrumbs(links){
+    var tags = "";
+    for(var i= 0; i<links.length; i++){
+        tags = tags + "<li><a href= " + links[i].link + ">" + links[i].nazov + "</a></li>";
+    }
+    $(".breadcrumb").html(tags);
+    var lastLi = $(".breadcrumb").find("li").last();
+    lastLi.addClass("active");
+    var lastLiText = $(".breadcrumb").find("a").last().text();
+    lastLi.html(lastLiText);
+}
+
+
