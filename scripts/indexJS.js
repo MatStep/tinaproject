@@ -13,17 +13,17 @@ $(document).ready(function(){
 
 	//controller.addTween('#fade1', 
 	//TweenLite.to($('#fade1'), .5, {css:{opacity:100}}));
-	controller.addTween('.left0', TweenMax.from( $('.left0'), 0.7, {css:{right:'2000px'}, ease:Quad.easeInOut}));
-	controller.addTween('.left1', TweenMax.from( $('.left1'), 0.7, {css:{right:'2000px'}, ease:Quad.easeInOut}));
-	controller.addTween('.left2', TweenMax.from( $('.left2'), 0.7, {css:{right:'2000px'}, ease:Quad.easeInOut}));
-	controller.addTween('.left3', TweenMax.from( $('.left3'), 0.7, {css:{right:'2000px'}, ease:Quad.easeInOut}));
-	controller.addTween('.left4', TweenMax.from( $('.left4'), 0.7, {css:{right:'2000px'}, ease:Quad.easeInOut}));
-	controller.addTween('.left4', TweenMax.from( $('.right4'), 0.7, {css:{left:'2000px'}, ease:Quad.easeInOut}));
+	controller.addTween('.left0', TweenMax.from( $('.left0'), 0.7, {css:{right:'500px',opacity:0}, ease:Quad.easeInOut}));
+	controller.addTween('.left1', TweenMax.from( $('.left1'), 0.7, {css:{right:'500px',opacity:0}, ease:Quad.easeInOut}));
+	controller.addTween('.left2', TweenMax.from( $('.left2'), 0.7, {css:{right:'500px',opacity:0}, ease:Quad.easeInOut}));
+	controller.addTween('.left3', TweenMax.from( $('.left3'), 0.7, {css:{right:'500px',opacity:0}, ease:Quad.easeInOut}));
+	controller.addTween('.left4', TweenMax.from( $('.left4'), 0.7, {css:{right:'500px',opacity:0}, ease:Quad.easeInOut}));
+	controller.addTween('.left4', TweenMax.from( $('.right4'), 0.7, {css:{left:'500px',opacity:0}, ease:Quad.easeInOut}));
 
-	controller.addTween('.right0', TweenMax.from( $('.right0'), 0.7, {css:{left:'2000px'}, ease:Quad.easeInOut}));
-	controller.addTween('.right1', TweenMax.from( $('.right1'), 0.7, {css:{left:'2000px'}, ease:Quad.easeInOut}));
-	controller.addTween('.right2', TweenMax.from( $('.right2'), 0.7, {css:{left:'2000px'}, ease:Quad.easeInOut}));
-	controller.addTween('.right3', TweenMax.from( $('.right3'), 0.7, {css:{left:'2000px'}, ease:Quad.easeInOut}));
+	controller.addTween('.right0', TweenMax.from( $('.right0'), 0.7, {css:{left:'500px',opacity:0}, ease:Quad.easeInOut}));
+	controller.addTween('.right1', TweenMax.from( $('.right1'), 0.7, {css:{left:'500px',opacity:0}, ease:Quad.easeInOut}));
+	controller.addTween('.right2', TweenMax.from( $('.right2'), 0.7, {css:{left:'500px',opacity:0}, ease:Quad.easeInOut}));
+	controller.addTween('.right3', TweenMax.from( $('.right3'), 0.7, {css:{left:'500px',opacity:0}, ease:Quad.easeInOut}));
 	//controller.addTween('.right4', TweenMax.from( $('.right3') ,.5, {css:{left:'1000px'}, ease:Quad.easeInOut}));
 
 	
