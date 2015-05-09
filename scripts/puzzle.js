@@ -1,6 +1,9 @@
 // Puzzle JavaScript
 
-var NUM_PIECES = 8;
+/* Used external sources links Chart http://bl.ocks.org/mbostock/3885304
+ * http://interactjs.io/
+ * http://vuc2013.volimludi.sk/wp-content/themes/volimludi/images/mapaSR_volimludi.png
+*/
 
 var points = 0;
 var kraje = 0;
