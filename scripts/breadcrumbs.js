@@ -1,37 +1,11 @@
-var breadcrumbs;
 
 $(document).ready(function () {
+
     if (typeof(Storage) != "undefined") {
-        breadcrumbs = JSON.parse(localStorage.getItem("odkazy"));
-        var tags="";
-        
-        if(breadcrumbs != null)
-        {
-            tags = '<ul class="crumbs">';
-            for (var i = 0; i < seriesOfLink.length; i++) {
-                if (i == seriesOfLink.length - 1) {
-                    tags += '<li><a href=' + seriesOfLink[i].link + '>' + seriesOfLink[i].name + '</a></li>';
-                }
-                else {
-                    tags += '<li><a href=' + seriesOfLink[i].link + '>' + seriesOfLink[i].name + '</a></li>';
-                }
-            }
-            tags += '</ul>';
-        }
-        if ($(".breadcrumb") != null) {
-            $(".breadcrumb").innerHTML = tags;        
-        }
-    }
-    
-    $(".breadcrumb").find("a").on("click", function(){
-        if (typeof(Storage) != "undefined") {
 
             var seriesOfLink = JSON.parse(localStorage.getItem("odkazy"));
 
-            var links = {
-                name: this.innerHTML,
-                link: this.href
-            }
+            var links = {nazov: $(document).find("title").text(), link: window.location.href};
 
             if (seriesOfLink == null) {
                 var seriesOfLink = new Array();
@@ -45,9 +19,20 @@ $(document).ready(function () {
                 seriesOfLink.push(links);
             }
 
-
             localStorage.setItem("odkazy", JSON.stringify(seriesOfLink));
-
+            
         }
-        });
-});
+        createBreadcrumbs(seriesOfLink);
+    });
+    
+    function createBreadcrumbs(links){
+        var tags = "";
+        for(var i= 0; i<links.length; i++){
+            tags = tags + "<li><a href= " + links[i].link + ">" + links[i].nazov + "</a></li>";
+        }
+        $(".breadcrumb").html(tags);
+        var lastLi = $(".breadcrumb").find("li").last();
+        lastLi.addClass("active");
+        var lastLiText = $(".breadcrumb").find("a").last().text();
+        lastLi.html(lastLiText);
+    }
