@@ -361,6 +361,7 @@ $(document).ready(function(){
 				$(".score").removeClass('hidden');
 				$('#play_again').prop('disabled', false);
 				$("#body").addClass('hidden');
+				$('#map_wrapper').addClass('hidden');
 				makeGraph();
 			}
 		  }, 2000);
@@ -433,6 +434,7 @@ $(document).ready(function(){
 				$(".score").removeClass('hidden');
 				$('#play_again').prop('disabled', false);
 				$("#body").addClass('hidden');
+				$('#map_wrapper').addClass('hidden');
 				makeGraph();
 			}
 		}, 2000);
@@ -451,6 +453,7 @@ $(document).ready(function(){
 		$('#googleMap').removeClass('hidden').show();
 		$("#nadpis").addClass('hidden');
 		$("#body").removeClass('hidden');
+		$('#map_wrapper').removeClass('hidden').show();
 		$('button').prop('disabled', true);
 
 		//na zaklade vyberu mapy sa zvolí Slovesnko alebo Európa
@@ -570,11 +573,12 @@ $(document).ready(function(){
 
 	function ohodnot(){
 		switch(true){
-			case(points>=0): $("#hodnotenie").text("Že si len tipoval ? :)");
+			case(points >= 0): $("#hodnotenie").text("Že si len tipoval ? :)");break;
 			case (points >= 200): $("#hodnotenie").text("Slušný výsledok, ale máš čo zlepšovať");break;
 			case (points >= 400): $("#hodnotenie").text("Dobre si sa učil. Vyznáš sa");break;
 			case (points >= 600): $("#hodnotenie").text("Vynikájúci výsledok. Na jedničku");break;
-			case (points >= 8000): $("#hodnotenie").text("Wow, ty musíš byť geograf");break;
+			case (points >= 800): $("#hodnotenie").text("Wow, ty musíš byť geograf");break;
+			
 		}
 	}
 	
