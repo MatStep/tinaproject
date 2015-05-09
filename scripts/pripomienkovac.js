@@ -16,12 +16,12 @@ $(document).ready(function(){
         $("#pripomienky").add( "<li><a href='#' id='"+ uniqid +"'><div class='fa fa-check'></div></a> " + item + "</li>" ).fadeIn().prependTo("#pripomienky");
         
 
-        $( "ul > li > a" ).click(function() {
+        $( "#pripomienky > li > a" ).click(function() {
             odober($(this))
         });
     });
 
-    $( "ul > li > a" ).click(function() {
+    $( "#pripomienky> li > a" ).click(function() {
         odober($(this))
     });
     
