@@ -1,3 +1,11 @@
+/**
+ * Pouzite kody, obrazky, tutorialy
+ * http://www.elated.com/articles/drag-and-drop-with-jquery-your-essential-guide/
+ * http://www.w3schools.com/dom/dom_loadxmldoc.asp
+ * http://api.jqueryui.com/draggable/
+ * https://jqueryui.com/droppable/
+ * http://www.sitepoint.com/creating-simple-line-bar-charts-using-d3-js/
+ */
 var zadanie;
 var napoveda;
 var riesenie;
