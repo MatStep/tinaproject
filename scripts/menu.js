@@ -8,7 +8,6 @@ var isHome = currUrlSeg=='index.html';
 
 $( document ).ready(function() {
 	createNav();
-	alert(currUrlSeg);
 });
 
 function createNav() {
