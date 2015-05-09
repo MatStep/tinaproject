@@ -8,6 +8,7 @@ var isHome = currUrlSeg=='index.html';
 
 $( document ).ready(function() {
 	createNav();
+	alert(currUrlSeg);
 });
 
 function createNav() {
@@ -28,7 +29,12 @@ function createNav() {
 		if(menu[i].link == "#") {
 			makeSub(nav,menu[i]);
 		} else {
-			makeLi(nav,menu[i]);
+			if(menu[i].link.split('/').pop()==currUrlSeg) {
+				makeLiActive(nav, menu[i]);
+			}
+			else {
+				makeLi(nav, menu[i]);
+			}
 		}
 	};
 
@@ -51,7 +57,12 @@ else {
 		if(menu[i].link == "#") {
 			makeSub(nav,menu[i]);
 		} else {
-			makeLi(nav,menu[i]);
+			if(menu[i].link.split('/').pop()==currUrlSeg) {
+				makeLiActive(nav, menu[i]);
+			}
+			else {
+				makeLi(nav, menu[i]);
+			}
 		}
 	};
 
@@ -64,7 +75,19 @@ else {
 
 // makes submenu
 function makeSub(navItem, menuObj) {
-	navItem.append('<li class="dropdown" id="' + menuObj.shortName + 'Id"></li>');
+	var found=false;
+	for (var i = 0; i < menuObj.sub.length; i++) {
+		if(menuObj.sub[i].link.split('/').pop()==currUrlSeg) {
+			found=true;
+			break;
+		}
+	}
+	if(found) {
+		navItem.append('<li class="active dropdown" id="' + menuObj.shortName + 'Id"></li>');
+	}
+	else {
+		navItem.append('<li class="dropdown" id="' + menuObj.shortName + 'Id"></li>');
+	}
 	navItem = $(navItem.selector + ' li#' + menuObj.shortName + 'Id').append('<a class="dropdown-toggle" data-toggle="dropdown" href="#">' + menuObj.name + '<b class="caret"></b></a>')
 	navItem.append('<ul class="dropdown-menu"></ul>');
 
@@ -75,13 +98,11 @@ function makeSub(navItem, menuObj) {
 			make2ndSub(navItem, menuObj.sub[i], i);
 		} else {
 			makeLi(navItem, menuObj.sub[i]);
-			if(menuObj.link.split('/').pop()==currUrlSeg) {
-				makeLiActive(navItem, menuObj.sub[i]);
-			}
 		}
 	};
 }
 
+//makes 2nd submenu
 function make2ndSub(navItem, menuObj, i) {
 	navItem.append('<li class="dropdown-submenu" id="'+ menuObj.shortName + i + '-sub"></li>');
 	navItem = $(navItem.selector + ' li#' + menuObj.shortName + i + '-sub').append('<a tabindex="-' + i + '" href="#">' + menuObj.name + '</a>');
@@ -90,7 +111,7 @@ function make2ndSub(navItem, menuObj, i) {
 
 
 
-	//makes li and Link
+	//makes li and link
 	function makeLi(navItem, menuObj) {
 		if(isHome) {
 			navItem.append('<li>' +'<a href="' + menuObj.link + '" >' + menuObj.name + '</a></li>');
@@ -99,11 +120,13 @@ function make2ndSub(navItem, menuObj, i) {
 			navItem.append('<li>' +'<a href="../' + menuObj.link + '" >' + menuObj.name + '</a></li>');
 	}
 
+	//makes active li link
 	function makeLiActive(navItem, menuObj) {
 		if(isHome) {
-			navItem.append('<li>' +'<a href="' + menuObj.link + '" >' + menuObj.name + '</a></li>');
+			navItem.append('<li class="active">' +'<a href="' + menuObj.link + '" >' + menuObj.name + '</a></li>');
 		}
-		navItem.append('<li class="active">' +'<a href="../' + menuObj.link + '" >' + menuObj.name + '</a></li>');
+		else
+			navItem.append('<li class="active">' +'<a href="../' + menuObj.link + '" >' + menuObj.name + '</a></li>');
 	}
 
 	//makes ul
