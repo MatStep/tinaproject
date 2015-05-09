@@ -1,16 +1,63 @@
 /*Stylesheets TINA*/
 
 html {
-	font-family: 'Roboto', Helvetica, Arial,sans-serif;
 	position:relative;
 	min-height: 100%;
 }
 
 body {
+    font-family: 'Roboto', Helvetica, Arial,sans-serif;
 	margin-bottom:100px;
          padding: 60px 0 15px 0;
 }
 /*Header start link http://bootsnipp.com/snippets/featured/multi-level-dropdown-menu-bs3*/
+.navbar-default {
+    background-image:none;
+    background-color:#30302E;
+    border-width:0px;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: #E4E4E4;
+}
+
+.navbar-default .navbar-nav > li > a {
+    font-size:16px;
+    text-transform:uppercase;
+    color: #F0F0F0;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: #60B0EC;
+}
+
+.navbar-default .navbar-nav > .active > a {
+    color: #30302E;
+    background-color: #E4E4E4;
+}
+
+.navbar-default .navbar-brand {
+    font-size:18px;
+    color: #8CC3EC;
+    text-shadow:none;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    background-color:#30302E;
+    color:#F0F0F0;
+}
+
+.dropdown-menu > li > a {
+    color: #F0F0F0;
+    text-transform:uppercase;
+    padding: 5px 20px;
+}
+
+.dropdown-menu {
+    background-color: #30302E;
+    border:0px;
+}
+
 .dropdown-submenu {
     position: relative;
 }
