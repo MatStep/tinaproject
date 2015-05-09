@@ -49,27 +49,27 @@
 			"sub": [
 				{
 					"name": "Martin Štěpánek" ,
-					"link": "www/aboutus.html" ,
-					"sub": false
-				},
-				{
-					"name": "Jakub Jahič" ,
-					"link": "www/krizovky.html" ,
+					"link": "www/aboutus.html#firstDiv" ,
 					"sub": false
 				},
 				{
 					"name": "Anna Demeterová" ,
-					"link": "www/puzzle.html" ,
+					"link": "www/aboutus.html#secondDiv" ,
+					"sub": false
+				},
+				{
+					"name": "Jakub Jahič" ,
+					"link": "www/aboutus.html#thirdDiv" ,
 					"sub": false
 				},
 				{
 					"name": "Pavol Martiš" ,
-					"link": "www/slepamapa.html" ,
+					"link": "www/aboutus.html#fourthDiv" ,
 					"sub": false
 				},
 				{
 					"name": "Rastislav Páleník" ,
-					"link": "www/sudoku.html" ,
+					"link": "www/aboutus.html#fifthDiv" ,
 					"sub": false
 				}
 			]

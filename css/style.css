@@ -64,14 +64,25 @@ body {
 /*Content start*/
 .textAbout p{
     font-size:18px;
-    margin-top:8%;
+    margin-top:5%;
 }
 
 .rotate {
     -ms-transform: rotate(-25deg); /* IE 9 */
     -webkit-transform: rotate(-25deg); /* Chrome, Safari, Opera */
     transform: rotate(-25deg);
-} 
+}
+
+#firstDiv:before,
+#secondDiv:before,
+#thirdDiv:before,
+#fourthDiv:before,
+#fifthDiv:before {
+   content: "";
+   display: block;
+   height: 40px;
+   margin: -30px 0 0;
+}
 
 /*Content end*/
 /*Footer start*/
