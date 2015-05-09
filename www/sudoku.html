@@ -10,7 +10,15 @@
 		<script src="http://code.jquery.com/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<!-- Load c3.css -->
+		<link href="../scripts/c3/c3.css" rel="stylesheet" type="text/css">
+
+		<!-- Load d3.js and c3.js -->
+		<script src="../scripts/c3/c3.min.js"></script>
+		
 		<script src="../scripts/sudoku.js"></script>
+		
 	</head>
 	<body>
 		<header>
@@ -95,10 +103,15 @@
 				<script>
 					play_game();
 				</script>	
+				
 			</div>
 			<div class="col-md-4">
 			</div>
 		</div>
+		<div id="chart">
+		</div>
+		<script>graph();</script>	
+		<br><br><br><br><br><br><br><br><br>
 		<footer>
 			<div class="container">
 				<p class="footer-text">Rastislav Páleník</p>
