@@ -1,48 +1,6 @@
-/*Stylesheets TINA*/
-
-html {
-	font-family: 'Roboto', Helvetica, Arial,sans-serif;
-	position:relative;
-	min-height: 100%;
-}
-
-body {
-	
-}
-
-/*Content start*/
-body > .container {
-	padding: 60px 15px 0;
-}
-/*Content end*/
-
-/*Footer start*/
-.footer-text {
-	color:#EFEFE6;
-	font-size:18px;
-}
-
-footer .footer-text {
-	margin: 20px 0;
-}
-
-footer > .container {
-	padding-right: 15px;
-	padding-left: 15px;
-}
-
-footer {
-		text-align: center;
-		position:absolute;
-		width:100%;
-		height:100px;
-		color:#FBFBFB;
-		background: #30302E;
-		bottom:0;
-}
-/* Footer end */
 
 /*sudoku style start*/
+
 table  {
    border: 1px solid black;
 }
@@ -74,3 +32,26 @@ strong {
 }
 
 /*sudoku style end*/
+/*graf style start*/
+   .axis path, .axis line
+        {
+            fill: none;
+            stroke: #777;
+            shape-rendering: crispEdges;
+        }
+        
+        .axis text
+        {
+            font-family: 'Arial';
+            font-size: 13px;
+        }
+        .tick
+        {
+            stroke-dasharray: 1, 2;
+        }
+        .bar
+        {
+            fill: FireBrick;
+        }
+        
+/*graf style end*/

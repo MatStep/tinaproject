@@ -1,0 +1,101 @@
+[
+{
+	"name": "Domov" ,
+	"link": "index.html" ,
+	"sub": false
+	},
+	{
+		"name": "Naše práce",
+		"shortName":"works",
+		"link": "#",
+		"sub": [
+		{
+			"name": "Anagramy" ,
+			"link": "www/anagramy.html" ,
+			"sub": false
+		},
+		{
+			"name": "Krížovky" ,
+			"link": "www/krizovky.html" ,
+			"sub": false
+		},
+		{
+			"name": "Puzzle" ,
+			"link": "www/puzzle.html" ,
+			"sub": false
+		},
+		{
+			"name": "Slepá mapa" ,
+			"link": "www/slepamapa.html" ,
+			"sub": false
+		},
+		{
+			"name": "Sudoku" ,
+			"link": "www/sudoku.html" ,
+			"sub": false
+		}
+
+		]
+	},
+	{
+	"name": "O nás" ,
+	"shortName":"aboutus",
+	"link": "#" ,
+	"sub": [
+		{
+			"name": "Kto sme my" ,
+			"shortName":"who",
+			"link": "#" ,
+			"sub": [
+				{
+					"name": "Martin Štěpánek" ,
+					"link": "www/aboutus.html#firstDiv" ,
+					"sub": false
+				},
+				{
+					"name": "Anna Demeterová" ,
+					"link": "www/aboutus.html#secondDiv" ,
+					"sub": false
+				},
+				{
+					"name": "Jakub Jahič" ,
+					"link": "www/aboutus.html#thirdDiv" ,
+					"sub": false
+				},
+				{
+					"name": "Pavol Martiš" ,
+					"link": "www/aboutus.html#fourthDiv" ,
+					"sub": false
+				},
+				{
+					"name": "Rastislav Páleník" ,
+					"link": "www/aboutus.html#fifthDiv" ,
+					"sub": false
+				}
+			]
+		},
+		{
+			"name": "Rozdelenie úloh" ,
+			"shortName":"tasks",
+			"link": "www/delbaPrac.html" ,
+			"sub": false
+		},
+		{
+			"name": "Kontakt" ,
+			"shortName":"contact",
+			"link": "www/kontakt.html" ,
+			"sub": false
+		}
+		]
+	},
+	{
+	"name": "Pripomienkovač" ,
+	"link": "www/pripomienkovac.html" ,
+	"sub": false
+	},
+	{
+	"name": "Meniny" ,
+	"link": "www/meniny.html" ,
+	"sub": false
+	}
+]
