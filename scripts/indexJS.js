@@ -2,7 +2,7 @@ $(document).ready(function(){
 	var controller = $.superscrollorama();
 	
 
-	TweenMax.from( $('#wing'), 1, {opacity:0,scale:0.5} );
+	TweenMax.from( $('#wing'), 2, {opacity:0,scale:0.5,rotation:720} );
 	TweenMax.from( $('#first').find("h1"), 0.5, {left:600} );
 	TweenMax.from( $('#first').find("h2"), 0.5, {opacity:0,left:90, delay:0.5} );
 	TweenMax.staggerFrom( $('.album').find("a"), 0.5, {opacity:0,y:90,delay:0.5},0.2 );
