@@ -110,3 +110,7 @@ footer {
 		bottom:0;
 }
 /* Footer end */
+
+.page-header h1{
+    font-size: 30px;
+}
