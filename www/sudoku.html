@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <script src="http://code.jquery.com/jquery.js"></script>
+		<script type="text/javascript" src="../libs/d3.min.js"></script>
+        <script type="text/javascript" src="../libs/jquery-ui/jquery-ui.min.js"></script>
         <script type="text/javascript" src="../scripts/breadcrumbs.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -55,16 +57,18 @@
 					</tr>
 				</table>
 				<table id="numbers">
-					<td id="number1" onclick="pickNumber(1)">1</td>
-					<td id="number2" onclick="pickNumber(2)">2</td>
-					<td id="number3" onclick="pickNumber(3)">3</td>
-					<td id="number4" onclick="pickNumber(4)">4</td>
-					<td id="number5" onclick="pickNumber(5)">5</td>
-					<td id="number6" onclick="pickNumber(6)">6</td>
-					<td id="number7" onclick="pickNumber(7)">7</td>
-					<td id="number8" onclick="pickNumber(8)">8</td>
-					<td id="number9" onclick="pickNumber(9)">9</td>
-					<td id="current"></td>
+					<tr>
+						<td id="number1" onclick="pickNumber(1)">1</td>
+						<td id="number2" onclick="pickNumber(2)">2</td>
+						<td id="number3" onclick="pickNumber(3)">3</td>
+						<td id="number4" onclick="pickNumber(4)">4</td>
+						<td id="number5" onclick="pickNumber(5)">5</td>
+						<td id="number6" onclick="pickNumber(6)">6</td>
+						<td id="number7" onclick="pickNumber(7)">7</td>
+						<td id="number8" onclick="pickNumber(8)">8</td>
+						<td id="number9" onclick="pickNumber(9)">9</td>
+						<td id="current"></td>
+					<tr>
 				</table>
 				<script>
 					play_game();
@@ -74,9 +78,7 @@
 			<div class="col-md-4">
 			</div>
 		</div>
-		<div id="chart">
-		</div>
-		<script>graph();</script>	
+		<svg id="visualisation" width="1000" height="500"></svg>	
 		<br><br><br><br><br><br><br><br><br>
 		<footer>
 			<div class="container">

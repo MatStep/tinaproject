@@ -61,7 +61,30 @@ body {
 /*Header end*/
 
 
+/*Content start*/
+.textAbout p{
+    font-size:18px;
+    margin-top:5%;
+}
 
+.rotate {
+    -ms-transform: rotate(-25deg); /* IE 9 */
+    -webkit-transform: rotate(-25deg); /* Chrome, Safari, Opera */
+    transform: rotate(-25deg);
+}
+
+#firstDiv:before,
+#secondDiv:before,
+#thirdDiv:before,
+#fourthDiv:before,
+#fifthDiv:before {
+   content: "";
+   display: block;
+   height: 40px;
+   margin: -30px 0 0;
+}
+
+/*Content end*/
 /*Footer start*/
 .footer-text {
 	color:#EFEFE6;
@@ -87,3 +110,12 @@ footer {
 		bottom:0;
 }
 /* Footer end */
+
+.page-header h1{
+    font-size: 30px;
+}
+
+.panel-default>.panel-heading{
+    color: #FBFBFB;
+    background: #30302E;
+}

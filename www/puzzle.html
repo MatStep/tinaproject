@@ -6,7 +6,8 @@
 	<title>Puzzle</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-	<script src="http://code.jquery.com/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/print.css" media="print">
+        <script src="http://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
@@ -29,7 +30,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">O nás</a>
+					<a class="navbar-brand" href="#">Puzzle</a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
@@ -60,15 +61,15 @@
 				<button type="button" id="button1" onclick="init()">Nová hra</button>
 				<button type="button" id="button2" onclick="graph()">Vykresli graf</button>
 				<button type="button" id="button3" onclick="help()">Nápoveda</button>
-				<img src="../images/BA.png" alt="Bratislavský kraj" id="baId" class="draggable drag-drop"></img>
-				<img src="../images/TT.png" alt="Trnavský kraj" id="ttId" class="draggable drag-drop"></img>
-				<img src="../images/TN.png" alt="Trenčianský kraj" id="tnId" class="draggable drag-drop"></img>
-				<img src="../images/PO.png" alt="Prešovský kraj" id="poId" class="draggable drag-drop"></img>
-				<img src="../images/NR.png" alt="Nitriansky kraj" id="nrId" class="draggable drag-drop"></img>
-				<img src="../images/KE.png" alt="Košický kraj" id="keId" class="draggable drag-drop"></img>
-				<img src="../images/BB.png" alt="Bánskobystrický kraj" id="bbId" class="draggable drag-drop"></img>
-				<img src="../images/ZA.png" alt="Žilinský kraj" id="zaId" class="draggable drag-drop"></img>
-				<img src="../images/mapaSR.png" alt="mapa SR" class="dropzone"></img>
+				<img src="../images/BA.png" alt="Bratislavský kraj" id="baId" class="draggable drag-drop"/>
+				<img src="../images/TT.png" alt="Trnavský kraj" id="ttId" class="draggable drag-drop"/>
+				<img src="../images/TN.png" alt="Trenčianský kraj" id="tnId" class="draggable drag-drop"/>
+				<img src="../images/PO.png" alt="Prešovský kraj" id="poId" class="draggable drag-drop"/>
+				<img src="../images/NR.png" alt="Nitriansky kraj" id="nrId" class="draggable drag-drop"/>
+				<img src="../images/KE.png" alt="Košický kraj" id="keId" class="draggable drag-drop"/>
+				<img src="../images/BB.png" alt="Bánskobystrický kraj" id="bbId" class="draggable drag-drop"/>
+				<img src="../images/ZA.png" alt="Žilinský kraj" id="zaId" class="draggable drag-drop"/>
+				<img src="../images/mapaSR.png" alt="mapa SR" class="dropzone">
 				<div class="results">
 					<p>Body: <span id="points"></span></p>
 					<p>Kraje: <span id="places"></span>/8</p>

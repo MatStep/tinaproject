@@ -114,7 +114,7 @@ button{
     text-shadow: 1px 1px 1px #fff;
     color: #4e2700;
     cursor: pointer;
-    border: none;
+    border: 1px solid rgba(0,0,0,0.1);
     outline: none;
 }
 
