@@ -2,15 +2,17 @@
 <html>
 	<head>
 		<title>Sudoku</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="../css/sudoku.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-		<script src="http://code.jquery.com/jquery.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-		<script src="../scripts/sudoku.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/sudoku.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script type="text/javascript" src="../scripts/breadcrumbs.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <script src="../scripts/sudoku.js"></script>
 	</head>
 	<body>
 		<header>
@@ -64,6 +66,8 @@
 		</nav>
 	</header>
 		<div class="container">
+			<ol class="breadcrumb">
+            </ol>
 			<div class="col-md-4">
 			</div>
 			<div class="col-md-4">
@@ -95,14 +99,19 @@
 				<script>
 					play_game();
 				</script>	
+				
 			</div>
 			<div class="col-md-4">
 			</div>
 		</div>
+		<div id="chart">
+		</div>
+		<script>graph();</script>	
+		<br><br><br><br><br><br><br><br><br>
 		<footer>
 			<div class="container">
 				<p class="footer-text">Rastislav Páleník</p>
 			</div>
 		</footer>
-	</body>
+	</body>  
 </html>

@@ -1,9 +1,18 @@
 var xmlDoc = loadXMLDoc("../xmls/sudoku.xml");
+var scores = [5, 8, 6];
+var i = 0;
+var matrix = [[],[],[],[],[],[],[],[],[]];
+var solution = [[],[],[],[],[],[],[],[],[]];
+var number = ' ';
+var points = 0;
 
 function play_game() {
 	var rand = Math.floor((Math.random() * 5));
 	create_game(xmlDoc, rand);
 	print_matrix();
+	scores[i] = points;
+	i++;
+	points = 0;
 	document.getElementById("points").innerHTML = "0";
 	document.getElementById("light").innerHTML = "";
 	document.getElementById("light").bgColor = "white";
@@ -24,10 +33,7 @@ function loadXMLDoc(filename)
 	return xhttp.responseXML;
 }
 
-var matrix = [[],[],[],[],[],[],[],[],[]];
-var solution = [[],[],[],[],[],[],[],[],[]];
-var number = ' ';
-var points = 0;
+
 
 function create_game(xml, gameNum) {
 	var text = xml.getElementsByTagName("game")[gameNum].childNodes[1].childNodes[0].nodeValue;
@@ -107,8 +113,16 @@ function check_cell(cell) {
 		}
 	}
 }
-
-
-
-
+function graph() {
+	var chart = c3.generate({
+		bindto: '#chart',
+		data: {
+		  columns: [
+			['hra1', scores[0]],
+			['hra2', scores[1]],
+			['hra3', scores[2]],
+		  ]
+		}
+	});
+}
 

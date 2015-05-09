@@ -8,6 +8,7 @@ html {
 
 body {
 	margin-bottom:100px;
+         padding: 60px 0 15px 0;
 }
 /*Header start link http://bootsnipp.com/snippets/featured/multi-level-dropdown-menu-bs3*/
 .dropdown-submenu {
@@ -59,11 +60,7 @@ body {
 }
 /*Header end*/
 
-/*Content start*/
-body > .container {
-	padding: 60px 15px 0;
-}
-/*Content end*/
+
 
 /*Footer start*/
 .footer-text {
