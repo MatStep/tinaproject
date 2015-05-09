@@ -1,0 +1,101 @@
+[
+{
+	"name": "Domov" ,
+	"link": "index.html" ,
+	"sub": false
+	},
+	{
+		"name": "Naše práce",
+		"shortName":"works",
+		"link": "#",
+		"sub": [
+		{
+			"name": "Anagramy" ,
+			"link": "www/anagramy.html" ,
+			"sub": false
+		},
+		{
+			"name": "Krížovky" ,
+			"link": "www/krizovky.html" ,
+			"sub": false
+		},
+		{
+			"name": "Puzzle" ,
+			"link": "www/puzzle.html" ,
+			"sub": false
+		},
+		{
+			"name": "Slepá mapa" ,
+			"link": "www/slepamapa.html" ,
+			"sub": false
+		},
+		{
+			"name": "Sudoku" ,
+			"link": "www/sudoku.html" ,
+			"sub": false
+		}
+
+		]
+	},
+	{
+	"name": "O nás" ,
+	"shortName":"aboutus",
+	"link": "#" ,
+	"sub": [
+		{
+			"name": "Kto sme my" ,
+			"shortName":"who",
+			"link": "#" ,
+			"sub": [
+				{
+					"name": "Martin Štěpánek" ,
+					"link": "www/anagramy.html" ,
+					"sub": false
+				},
+				{
+					"name": "Jakub Jahič" ,
+					"link": "www/krizovky.html" ,
+					"sub": false
+				},
+				{
+					"name": "Anna Demeterová" ,
+					"link": "www/puzzle.html" ,
+					"sub": false
+				},
+				{
+					"name": "Pavol Martiš" ,
+					"link": "www/slepamapa.html" ,
+					"sub": false
+				},
+				{
+					"name": "Rastislav Páleník" ,
+					"link": "www/sudoku.html" ,
+					"sub": false
+				}
+			]
+		},
+		{
+			"name": "Rozdelenie úloh" ,
+			"shortName":"tasks",
+			"link": "index.html" ,
+			"sub": false
+		},
+		{
+			"name": "Kontakt" ,
+			"shortName":"contact",
+			"link": "www/kontakt.html" ,
+			"sub": false
+		}
+		]
+	},
+	{
+	"name": "Pripomienkovač" ,
+	"link": "index.html" ,
+	"sub": false
+	},
+	{
+	"name": "Meniny" ,
+	"link": "index.html" ,
+	"sub": false
+	}
+]
