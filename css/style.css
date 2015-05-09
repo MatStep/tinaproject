@@ -161,3 +161,8 @@ footer {
 .page-header h1{
     font-size: 30px;
 }
+
+.panel-default>.panel-heading{
+    color: #FBFBFB;
+    background: #30302E;
+}

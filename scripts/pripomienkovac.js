@@ -5,20 +5,23 @@ $(document).ready(function(){
     $(".add").click(function(event) {
         var item = $("#novaUloha").val();
 
-         //pridá do localStorage
-        var randLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
-        var uniqid = randLetter + Date.now();
-        var data = {id: uniqid,
-                        content: item
-            };
-        SaveDataToLocalStorage(data);
+        if(item.length>0){
+             //pridá do localStorage
+            
+            var randLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
+            var uniqid = randLetter + Date.now();
+            var data = {id: uniqid,
+                            content: item
+                };
+            SaveDataToLocalStorage(data);
 
-        $("#pripomienky").add( "<li><a href='#' id='"+ uniqid +"'><div class='fa fa-check'></div></a> " + item + "</li>" ).fadeIn().prependTo("#pripomienky");
-        
+            $("#pripomienky").add( "<li><a href='#' id='"+ uniqid +"'><div class='fa fa-check'></div></a> " + item + "</li>" ).fadeIn().prependTo("#pripomienky");
+            
 
-        $( "#pripomienky > li > a" ).click(function() {
-            odober($(this))
-        });
+            $( "#pripomienky > li > a" ).click(function() {
+                odober($(this))
+            });
+        }
     });
 
     $( "#pripomienky> li > a" ).click(function() {
