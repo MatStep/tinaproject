@@ -4,7 +4,6 @@ $(document).ready(function(){
 
     $(".add").click(function(event) {
         var item = $("#novaUloha").val();
-        console.log(item);
 
          //pridá do localStorage
         var randLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
@@ -70,7 +69,7 @@ function getToDoList(){
     for(var i=0 ; i < retrievedObject.length; i++){
 
         if(retrievedObject[i] && retrievedObject[i].id && retrievedObject[i].content ){
-            var content = "<li><a href='#'><div class='fa fa-check'></div></a>" + retrievedObject[i].content + "</li>";
+            var content = "<li><a href='#' id='"+ retrievedObject[i].id +"'><div class='fa fa-check'></div></a>" + retrievedObject[i].content + "</li>";
             $("#pripomienky").append(content).fadeIn();
         }
     }
