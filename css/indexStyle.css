@@ -30,22 +30,6 @@
 			text-decoration: none;
 		}
 
-		p.album a:nth-child(1){
-			border: 2px solid #ECCA0A;
-		}
-		p.album a:nth-child(2){
-			border: 2px solid #70D509;
-		}
-		p.album a:nth-child(3){
-			border: 2px solid #CF094F;
-		}
-		p.album a:nth-child(4){
-			border: 2px solid #421E9B;
-		}
-		p.album a:nth-child(5){
-			border: 2px solid #07898F;
-		}
-
 		.ciara{
 			width:100%;
 			border-top: 2px solid #4b4b4b;
