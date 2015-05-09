@@ -391,9 +391,10 @@ $(document).ready(function(){
 				uhadol = true;
 			}
 			else{ //neuhádol
-				$("#plusScore").text("(+0)");
+				
 			}
 		}
+		if(!uhadol)$("#plusScore").text("(+0)");//neuhádol
 		
 		$("#plusScore").show();
 		$("#plusScore").fadeOut(2000);
@@ -573,12 +574,11 @@ $(document).ready(function(){
 
 	function ohodnot(){
 		switch(true){
-			case(points >= 0): $("#hodnotenie").text("Že si len tipoval ? :)");break;
-			case (points >= 200): $("#hodnotenie").text("Slušný výsledok, ale máš čo zlepšovať");break;
-			case (points >= 400): $("#hodnotenie").text("Dobre si sa učil. Vyznáš sa");break;
-			case (points >= 600): $("#hodnotenie").text("Vynikájúci výsledok. Na jedničku");break;
 			case (points >= 800): $("#hodnotenie").text("Wow, ty musíš byť geograf");break;
-			
+			case (points >= 600): $("#hodnotenie").text("Vynikájúci výsledok. Na jedničku");break;
+			case (points >= 400): $("#hodnotenie").text("Dobre si sa učil. Vyznáš sa");break;
+			case (points >= 200): $("#hodnotenie").text("Slušný výsledok, ale máš čo zlepšovať");break;
+			case(points >= 0): $("#hodnotenie").text("Že si len tipoval ? :)");break;
 		}
 	}
 	
