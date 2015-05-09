@@ -71,7 +71,7 @@
 			margin-bottom: 20px;
 		}
 
-		@media screen and (max-width: 600px) {
+		@media screen and (max-width: 800px) {
 			.foto{
 				display:inline-block;
 				width:40%;
@@ -79,7 +79,16 @@
 			} 
 
 			#wing{
-				max-width:100%;
-				max-height:200px;
+				display:none;
+			}
+
+			.pos-relative h3,.pos-relative p{
+				text-align: center;
+			}
+			.pos-relative a{
+				width:100px;
+				margin: 0px 0 0 -50px;
+				position:relative;
+  				left: 50%;
 			}
 		}
