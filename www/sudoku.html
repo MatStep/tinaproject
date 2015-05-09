@@ -1,108 +1,94 @@
 ﻿<!DOCTYPE html>
 <html>
-	<head>
-		<title>Sudoku</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="../css/sudoku.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-		<script src="http://code.jquery.com/jquery.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-		<script src="../scripts/sudoku.js"></script>
-	</head>
-	<body>
-		<header>
-			<nav class="navbar navbar-default navbar-fixed-top">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="#">SUDOKU</a>
-					</div>
-					<div id="navbar" class="collapse navbar-collapse">
-						<ul class="nav navbar-nav">
-							<li class="dropdown">
-								<a href="../index.html">Domov</a>
-							</li>
-						</ul>
-					</div>
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">Sudoku</a>
-				</div>
-				<div id="navbar" class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li>
-							<a href="../index.html">Domov</a>
-						</li>
-						<li class="dropdown active">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Naše práce</a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="anagramy.html">Anagramy</a></li>
-								<li><a href="#">Krížovky</a></li>
-								<li><a href="puzzle.html">Puzzle</a></li>
-								<li><a href="#">Slepá mapa</a></li>
-								<li><a href="sudoku.html">Sudoku</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
-		<div class="container">
-			<div class="col-md-4">
-			</div>
-			<div class="col-md-4">
-				<button onclick="play_game()">Nová hra</button>
-				<a href="sudoku_pomoc.html">Pomoc</a>
-				<br>
-				<table id="board"></table>
-				<table id="score">
-					<tr>
-						<td colspan='2' id="light"></td>
-					</tr>
-					<tr>
-						<td>BODY:</td>
-						<td id="points">0</td>
-					</tr>
-				</table>
-				<table id="numbers">
-					<td id="number1" onclick="pickNumber(1)">1</td>
-					<td id="number2" onclick="pickNumber(2)">2</td>
-					<td id="number3" onclick="pickNumber(3)">3</td>
-					<td id="number4" onclick="pickNumber(4)">4</td>
-					<td id="number5" onclick="pickNumber(5)">5</td>
-					<td id="number6" onclick="pickNumber(6)">6</td>
-					<td id="number7" onclick="pickNumber(7)">7</td>
-					<td id="number8" onclick="pickNumber(8)">8</td>
-					<td id="number9" onclick="pickNumber(9)">9</td>
-					<td id="current"></td>
-				</table>
-				<script>
-					play_game();
-				</script>	
-			</div>
-			<div class="col-md-4">
-			</div>
-		</div>
-		<footer>
-			<div class="container">
-				<p class="footer-text">Rastislav Páleník</p>
-			</div>
-		</footer>
-	</body>
+    <head>
+        <title>Sudoku</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../css/sudoku.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script type="text/javascript" src="../scripts/breadcrumbs.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <script src="../scripts/sudoku.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Sudoku</a>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="../index.html">Domov</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Naše práce</a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="anagramy.html">Anagramy</a></li>
+                                    <li><a href="#">Krížovky</a></li>
+                                    <li><a href="puzzle.html">Puzzle</a></li>
+                                    <li><a href="slepamapa.html">Slepá mapa</a></li>
+                                    <li><a href="sudoku.html">Sudoku</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </nav>
+        </header>
+        <ol class="breadcrumb">
+
+        </ol>
+        <div class="container">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                        <button onclick="play_game()">Nová hra</button>
+                        <a href="sudoku_pomoc.html">Pomoc</a>
+                        <br>
+                        <table id="board"></table>
+                        <table id="score">
+                                <tr>
+                                        <td colspan='2' id="light"></td>
+                                </tr>
+                                <tr>
+                                        <td>BODY:</td>
+                                        <td id="points">0</td>
+                                </tr>
+                        </table>
+                        <table id="numbers">
+                                <td id="number1" onclick="pickNumber(1)">1</td>
+                                <td id="number2" onclick="pickNumber(2)">2</td>
+                                <td id="number3" onclick="pickNumber(3)">3</td>
+                                <td id="number4" onclick="pickNumber(4)">4</td>
+                                <td id="number5" onclick="pickNumber(5)">5</td>
+                                <td id="number6" onclick="pickNumber(6)">6</td>
+                                <td id="number7" onclick="pickNumber(7)">7</td>
+                                <td id="number8" onclick="pickNumber(8)">8</td>
+                                <td id="number9" onclick="pickNumber(9)">9</td>
+                                <td id="current"></td>
+                        </table>
+                        <script>
+                                play_game();
+                        </script>	
+                </div>
+                <div class="col-md-4">
+                </div>
+        </div>
+        <footer>
+                <div class="container">
+                        <p class="footer-text">Rastislav Páleník</p>
+                </div>
+        </footer>
+    </body>
 </html>
