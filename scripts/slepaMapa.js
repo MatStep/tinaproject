@@ -324,13 +324,15 @@ $(document).ready(function(){
 
 
 		switch(true){
-			case(distance < (range/20)): points+=100; break;
-			case(distance < (range/10)): points+=50; break;
-			case(distance < (range/5)): points+=25; break;
-			case(distance < (range/2)): points+=0; break;
+			case(distance < (range/20)): points+=100;$("#plusScore").text("(+100)"); break;
+			case(distance < (range/10)): points+=50;$("#plusScore").text("(+50)"); break;
+			case(distance < (range/5)): points+=25;$("#plusScore").text("(+25)"); break;
+			case(distance < (range/2)): points+=0;$("#plusScore").text("(+0)"); break;
 		}
 
 		$(".score").text(points);
+		$("#plusScore").show();
+		$("#plusScore").fadeOut(2000);
 		pointsHistory.push({round:pointsHistory.length+1 , points: points});
 		
 
@@ -381,16 +383,19 @@ $(document).ready(function(){
 
 		for(i=0; i < arr.length;i++){
 			porovnaj = arr[i].strtr("ÁÄČÇĎÉĚËÍŇÓÖŘŠŤÚŮÜÝŽáäčçďéěëíňóöřšťúůüýž", "AACCDEEEINOORSTUUUYZaaccdeeeinoorstuuuyz");
-			console.log(inputCity + " == " +porovnaj);
 
 			if(inputCity == porovnaj){
 				points += 100;
+				$("#plusScore").text("(+100)");
 				uhadol = true;
 			}
 			else{ //neuhádol
-				
+				$("#plusScore").text("(+0)");
 			}
 		}
+		
+		$("#plusScore").show();
+		$("#plusScore").fadeOut(2000);
 		pointsHistory.push({round:pointsHistory.length+1 , points: points});
 
 		$("#input_city_name").addClass('hidden');
