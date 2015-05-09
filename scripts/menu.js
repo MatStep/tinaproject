@@ -4,7 +4,7 @@
 var navbar = document.getElementById("navbar");
 var currUrlSeg = window.location.href.split('/').pop();
 
-var isHome = currUrlSeg=='index.html';
+var isHome = (currUrlSeg == 'index.html') || (currUrlSeg == '');
 
 $( document ).ready(function() {
 	createNav();
@@ -14,7 +14,7 @@ function createNav() {
 
 	var menu;
 	//Get data from JSON file
-	if(currUrlSeg=='index.html') {
+	if(isHome) {
 		$.getJSON('nbproject/menu.json', function(response){
 			menu = response;
 		}).complete(function () {
