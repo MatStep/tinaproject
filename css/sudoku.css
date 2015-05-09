@@ -1,5 +1,6 @@
 /*Stylesheets TINA*/
 
+<<<<<<< HEAD
 html {
 	font-family: 'Roboto', Helvetica, Arial,sans-serif;
 	position:relative;
@@ -39,6 +40,8 @@ footer {
 /* Footer end */
 
 /*sudoku style start*/
+=======
+>>>>>>> origin/master
 table  {
    border: 1px solid black;
 }

@@ -8,13 +8,10 @@ html {
 
 body {
 	margin-bottom:100px;
+         padding: 60px 0 15px 0;
 }
 
-/*Content start*/
-body > .container {
-	padding: 60px 15px 0;
-}
-/*Content end*/
+
 
 /*Footer start*/
 .footer-text {
