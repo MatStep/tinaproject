@@ -19,7 +19,109 @@
 	<script src="libs/superscrollorama-master/js/jquery.superscrollorama.js"></script>
 	<script src="scripts/indexJS.js"></script>
 
-	
+	<style>
+		.foto{
+			max-width:95%;
+			max-height: 95%;
+		}
+
+		#wing{
+			max-width:100%;
+		}
+		
+		.album a{
+			width: 16%;
+			margin-left: 3%;
+			display:inline-block;
+			position:relative;
+			text-decoration: none;
+			cursor: pointer;
+			text-align:center;
+		}
+
+		.album a:link{
+			text-decoration: none;
+		}
+		.album a:hover{
+			text-decoration: none;
+		}
+		.album a:visited{
+			text-decoration: none;
+		}
+		.album a:link{
+			text-decoration: none;
+		}
+
+		p.album a:nth-child(1){
+			border: 2px solid #ECCA0A;
+		}
+		p.album a:nth-child(2){
+			border: 2px solid #70D509;
+		}
+		p.album a:nth-child(3){
+			border: 2px solid #CF094F;
+		}
+		p.album a:nth-child(4){
+			border: 2px solid #421E9B;
+		}
+		p.album a:nth-child(5){
+			border: 2px solid #07898F;
+		}
+
+		.ciara{
+			width:100%;
+			border-top: 2px solid #4b4b4b;
+		}
+
+		.img_wrapper{
+			width:100%;
+			height: 200px;
+			background-color: #fff;
+
+		}
+		.obsah{
+			position:relative;
+		}
+
+		.img_game{
+			max-width:95%;
+			max-height: 95%;
+			margin: auto;
+			  position: absolute;
+			  top: 0; left: 0; bottom: 0; right: 0;
+		}
+
+		.game_container{
+			margin-bottom: 40px;
+			position:relative;
+		}
+
+		h1,h2{
+			position: relative;
+		}
+		.pos-relative{
+			position:relative;
+		}
+
+		h3{
+			margin:0;
+		}
+
+		@media screen and (max-width: 600px) {
+			.foto{
+				display:inline-block;
+				width:40%;
+				margin: 10px 10px;
+			} 
+
+			#wing{
+				max-width:100%;
+				max-height:200px;
+			}
+		}
+
+
+	</style>
 </head>
 <body>
 	<header>
@@ -41,21 +143,135 @@
 			</div>
 		</nav>
 	</header>
+
     <div class="container">
         <ol class="breadcrumb">
         </ol>
     </div>
 	<div class="container">
 		<div class="col-md-4">
+		 	<img src="images/rainbow_wing.png" id="wing" alt="farebne kridlo">
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-6" id="first">
+			<h1>Vitaj na našej stránke</h1><br>
 			
+			<h2 class="text-center">Tím 6</h2> 
+			
+			<br>
+			<p class="album">
+				<a href="#"><img class="foto" src="images/smile.jpg" alt="foto"><b>Maťo</b></a>
+				<a href="#"><img class="foto" src="images/smile.jpg" alt="foto"><b>Rasťo</b></a>
+				<a href="#"><img class="foto" src="images/smile.jpg" alt="foto"><b>Anička</b></a>
+				<a href="#"><img class="foto" src="images/smile.jpg" alt="foto"><b>Palo</b></a>
+				<a href="#"><img class="foto" src="images/smile.jpg" alt="foto"><b>Kubo</b></a>
+			</p>
 
+			<p class="obsah">
+				Sme partia FEI-károv zgrupená za účelom vytvorenia čo najlepšej stránky v čo najkratšom čase v rámci splnenia zadania a termínu.<br><br>
+				<a href="#" class="btn btn-info" role="button">Klikni ak sa chceš dozvedieť viac</a> 
+			</p>
+		</div>
 
-		</div>
-		<div class="col-md-4">
-		</div>
+		<div class="col-md-2"></div>
+
+		
 	</div>
+	<div class="container">
+		<div class="col-md-10">
+			<div class="ciara"></div>
+		</div>
+		<div class="col-md-2"></div>
+	</div>	
+
+	<div class="container">
+			<div class="col-md-4">
+				<h2 class="text-center">Zahraj si hry:</h2>
+			</div>
+			<div class="col-md-6"></div>
+			<div class="col-md-2"></div>
+	</div>
+
+	<div class="container game_container " >
+			<div class="col-md-4 " >
+				<div class="img_wrapper left0 pos-relative">
+					<img src="images/game0.jpg" class="img_game img-rounded" alt="sudoku">
+				</div>
+			</div>
+			<div class="col-md-6 right0 pos-relative">
+				<h3>Anagramy</h3>
+				<p>
+					poprehadzuj si pismenka
+				</p>
+				<a href="www/anagramy.html" class="btn btn-primary" role="button">hraj</a>
+			</div>
+			<div class="col-md-2"></div>
+	</div>
+
+	<div class="container game_container">
+			<div class="col-md-4">
+			<div class="img_wrapper left1 pos-relative">
+				<img src="images/game1.png" class="img_game  img-rounded" alt="sudoku">
+			</div>
+			</div>
+			<div class="col-md-6 right1 pos-relative">
+				<h3>Krížovky</h3>
+				<p>
+					Vylúšti krížovky
+				</p>
+				<a href="www/krizovky.html" class="btn btn-primary" role="button">hraj</a>
+			</div>
+			<div class="col-md-2"></div>
+	</div>
+
+	<div class="container game_container" >
+			<div class="col-md-4 ">
+			<div class="img_wrapper left2 pos-relative">
+				<img src="images/game2.jpg" class="img_game  img-rounded" alt="sudoku">
+			</div>
+			</div>
+			<div class="col-md-6 right2 pos-relative">
+				<h3>Puzzle</h3>
+				<p>
+					Poskladaj si svoje slovensko
+				</p>
+				<a href="www/puzzle.html" class="btn btn-primary" role="button">hraj</a>
+			</div>
+			<div class="col-md-2"></div>
+	</div>
+
+	<div class="container game_container">
+			<div class="col-md-4 ">
+			<div class="img_wrapper left3 pos-relative">
+				<img src="images/game3.jpg" class="img_game  img-rounded" alt="sudoku">
+				</div>
+			</div>
+			<div class="col-md-6 right3 pos-relative">
+				<h3>Slepá mapa</h3>
+				<p>
+					Vyznáš sa v geografií? Nechaj sa preveriť. Nájdi na slepej mape mestá.
+				</p>
+				<a href="www/slepamapa.html" class="btn btn-primary" role="button">hraj</a>
+			</div>
+			<div class="col-md-2"></div>
+	</div>
+
+	<div class="container game_container">
+			<div class="col-md-4 ">
+				<div class="img_wrapper left4 pos-relative">
+				<img src="images/game4.png" class="img_game  img-rounded" alt="sudoku">
+				</div>
+			</div>
+			<div class="col-md-6 right4 pos-relative">
+				<h3>Sudoku</h3>
+				<p>
+					využi svoje matematické schopnosti a zabi chvíľu času jednou ranou
+				</p>
+				<a href="www/sudoku.html" class="btn btn-primary" role="button">hraj</a>
+			</div>
+			<div class="col-md-2"></div>
+	</div>
+
+
 	<footer>
 		<div class="container">
 			<p class="footer-text">Tu bude footer</p>
