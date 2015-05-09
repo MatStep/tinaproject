@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     if (typeof(Storage) != "undefined") {
         var linksCollection = JSON.parse(localStorage.getItem("breadcrumbs"));
-        var newLink = {nazov: $(document).find("title").text(), link: window.location.href.replace("#","")};
+        var newLink = {nazov: $(document).find("title").text(), link: window.location.href.split("#")[0]};
 
         if (linksCollection == null){
             var linksCollection = new Array();

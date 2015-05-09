@@ -8,10 +8,6 @@ and open the template in the editor.
     Author     : anuska
 */
 
-header, footer{
-    display: none;
-}
-
-.breadcrumb{
+header, footer, .breadcrumb, .game_container, #wing, #header-index, #btn-index{
     display: none;
 }
