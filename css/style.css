@@ -61,7 +61,19 @@ body {
 /*Header end*/
 
 
+/*Content start*/
+.textAbout p{
+    font-size:18px;
+    margin-top:8%;
+}
 
+.rotate {
+    -ms-transform: rotate(-25deg); /* IE 9 */
+    -webkit-transform: rotate(-25deg); /* Chrome, Safari, Opera */
+    transform: rotate(-25deg);
+} 
+
+/*Content end*/
 /*Footer start*/
 .footer-text {
 	color:#EFEFE6;
