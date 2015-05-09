@@ -4,7 +4,7 @@
 var navbar = document.getElementById("navbar");
 var currUrlSeg = window.location.href.split('/').pop();
 
-var isHome = (currUrlSeg == 'index.html') || (currUrlSeg == '');
+var isHome = (currUrlSeg == 'index.html');
 
 $( document ).ready(function() {
 	createNav();
