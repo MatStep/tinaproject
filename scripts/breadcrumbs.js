@@ -6,7 +6,7 @@
 $(document).ready(function(){
 
     if (typeof(Storage) != "undefined") {
-        var linksCollection = JSON.parse(localStorage.getItem("breadcrumbs"));
+        var linksCollection = JSON.parse(localStorage.getItem("breadcrumbsTim6"));
         var newLink = {nazov: $(document).find("title").text(), link: window.location.href.split("#")[0]};
 
         if (linksCollection == null){
@@ -21,7 +21,7 @@ $(document).ready(function(){
 
             linksCollection.push(newLink);
         }
-        localStorage.setItem("breadcrumbs", JSON.stringify(linksCollection));
+        localStorage.setItem("breadcrumbsTim6", JSON.stringify(linksCollection));
     }
     createBreadcrumbs(linksCollection);
 });

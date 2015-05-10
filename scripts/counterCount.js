@@ -5,15 +5,16 @@
 $(document).ready(function(){
 
     if (typeof(Storage) != "undefined") {
-        var counter = JSON.parse(localStorage.getItem("counter"));
+        var counter = JSON.parse(localStorage.getItem("counterTim6"));
 
         if (counter == null){
             var counter = 1;
         }
 
         else{
+            parseInt(counter);
             counter++;
         }
-        localStorage.setItem("counter", counter);
+        localStorage.setItem("counterTim6", counter);
     }
 });
