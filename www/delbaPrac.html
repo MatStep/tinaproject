@@ -14,7 +14,7 @@
         <script type="text/javascript" src="../scripts/breadcrumbs.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <script src="../scripts/menu.js"></script>
-		<script src="../scripts/counter.js"></script>
+        <script src="../scripts/counterShow.js"></script>
 </head>
 <body>
     <header>
@@ -104,9 +104,12 @@
         </div>
     </div>
     <footer>
-        <div class="container">
+        <div class="container row">
+        <div class="col-md-6 col-xs-6">
             <p class="footer-text">TINA Tím 6, 2015</p>
-            <script>insertCounter();</script>
+        </div >
+        <div class="col-md-6 col-xs-6" id="footerText">
+        </div>
         </div>
     </footer>
 </body>
