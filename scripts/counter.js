@@ -38,7 +38,7 @@ function insertCounter() {
  displayCounter();
 }
  function displayCounter() {
- document.write('<p class="footer-text" ALIGN="RIGHT">');
+ document.write('<p class="footer-text">');
  document.write("Navštívil si túto stránku ");
  if(counter==1)
      document.write("po prvý krát.");
