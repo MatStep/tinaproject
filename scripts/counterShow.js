@@ -9,7 +9,7 @@ $(document).ready(function(){
 
     if (typeof(Storage) != "undefined") {
         var counter = JSON.parse(localStorage.getItem("counter"));
-        var tag = "<h4> Toto je tvoja " + counter + ". návšteva.</h4>"; 
+        var tag = "<p class='footer-text'> Toto je tvoja " + counter + ". návšteva.</p>"; 
         $("#footerText").append(tag);
     }
 });

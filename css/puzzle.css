@@ -31,21 +31,6 @@ body {
 	padding-left: 20px;
 }
 
-.bar {
-	fill:#1975D1;
-}
-
-.bar:hover {
-	fill:#0F467D;
-}
-
-.axis path,
-.axis line {
-	fill: none;
-	stroke:#000;
-	shape-rendering: crispEdges;
-}
-
 .d3-tip {
   line-height: 1;
   font-weight: bold;

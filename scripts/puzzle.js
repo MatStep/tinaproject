@@ -110,6 +110,9 @@ function createGraph() {
 	.attr("x", 400)
 	.attr("y", 40)
 	.style("text-anchor", "middle")
+    .style("fill", "none")
+    .style("stroke", "#000")
+    .style("shape-rendering", "crispEdges")
 	.text("Hry");
 
 	svg.append("g")
@@ -120,6 +123,9 @@ function createGraph() {
 	.attr("y", 6)
 	.attr("dy", ".71em")
 	.style("text-anchor", "end")
+    .style("fill", "none")
+    .style("stroke", "#000")
+    .style("shape-rendering", "crispEdges")
 	.text("Body");
 
 	svg.selectAll(".bar")
@@ -130,6 +136,7 @@ function createGraph() {
 	.attr("width", 30)
 	.attr("y", function(d) { return y(d.points); })
 	.attr("height", function(d) { return height - y(d.points);})
+    .style("fill","#1975D1")
 	.on('mouseover', tip.show)
 	.on('mouseout', tip.hide);
 }
@@ -218,8 +225,8 @@ function dragMoveListener (event) {
 
     target.setAttribute('data-x', x);
     target.setAttribute('data-y', y);
-    if((target.id=="baId") && (x>-138 && x<-128) && (y>410 && y<420)) {
-    	target.setAttribute('data-x', -132);
+    if((target.id=="baId") && (x>-135 && x<-125) && (y>410 && y<420)) {
+    	target.setAttribute('data-x', -130);
     	target.setAttribute('data-y', 415);
     	validator[0]=1;
     }
@@ -227,8 +234,8 @@ function dragMoveListener (event) {
     	validator[0]=0;
     	points--;
     }
-    if((target.id=="ttId") && (x>-120 && x<-110) && (y>340 && y<350)) {
-    	target.setAttribute('data-x', -115);
+    if((target.id=="ttId") && (x>-118 && x<-108) && (y>340 && y<350)) {
+    	target.setAttribute('data-x', -113);
     	target.setAttribute('data-y', 345);
     	validator[1]=1;
     }
@@ -236,8 +243,8 @@ function dragMoveListener (event) {
     	validator[1]=0;
     	points--;
     }
-    if((target.id=="tnId") && (x>-50 && x<-40) && (y>245 && y<255)) {
-    	target.setAttribute('data-x', -45);
+    if((target.id=="tnId") && (x>-48 && x<-38) && (y>245 && y<255)) {
+    	target.setAttribute('data-x', -43);
     	target.setAttribute('data-y', 250);
     	validator[2]=1;
     }
@@ -245,8 +252,8 @@ function dragMoveListener (event) {
     	validator[2]=0;
     	points--;
     }
-    if((target.id=="nrId") && (x>-3 && x<7) && (y>380 && y<390)) {
-    	target.setAttribute('data-x', 2);
+    if((target.id=="nrId") && (x>-1 && x<9) && (y>380 && y<390)) {
+    	target.setAttribute('data-x', 4);
     	target.setAttribute('data-y', 385);
     	validator[3]=1;
     }
@@ -254,17 +261,17 @@ function dragMoveListener (event) {
     	validator[3]=0;
     	points--;
     }
-    if((target.id=="zaId") && (x>105 && x<115) && (y>180 && y<190)) {
-    	target.setAttribute('data-x', 110);
-    	target.setAttribute('data-y', 185);
+    if((target.id=="zaId") && (x>107 && x<117) && (y>183 && y<193)) {
+    	target.setAttribute('data-x', 112);
+    	target.setAttribute('data-y', 188);
     	validator[4]=1;
     }
     else {
     	validator[4]=0;
     	points--;
     }
-    if((target.id=="bbId") && (x>117 && x<127) && (y>337 && y<347)) {
-    	target.setAttribute('data-x', 122);
+    if((target.id=="bbId") && (x>119 && x<129) && (y>337 && y<347)) {
+    	target.setAttribute('data-x', 124);
     	target.setAttribute('data-y', 342);
     	validator[5]=1;
     }
@@ -272,8 +279,8 @@ function dragMoveListener (event) {
     	validator[5]=0;
     	points--;
     }
-    if((target.id=="poId") && (x>328 && x<338) && (y>218 && y<228)) {
-    	target.setAttribute('data-x', 333);
+    if((target.id=="poId") && (x>330 && x<340) && (y>218 && y<228)) {
+    	target.setAttribute('data-x', 335);
     	target.setAttribute('data-y', 223);
     	validator[6]=1;
     }
@@ -281,8 +288,8 @@ function dragMoveListener (event) {
     	validator[6]=0;
     	points--;
     }
-    if((target.id=="keId") && (x>378 && x<388) && (y>320 && y<330)) {
-    	target.setAttribute('data-x', 383);
+    if((target.id=="keId") && (x>380 && x<390) && (y>320 && y<330)) {
+    	target.setAttribute('data-x', 385);
     	target.setAttribute('data-y', 325);
     	validator[7]=1;
     }
