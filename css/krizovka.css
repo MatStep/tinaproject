@@ -1,54 +1,53 @@
-			body	{
-					text-align: center;
-			}
-			footer	{
-					margin-top: 10px;
-					margin-left: auto; 
-					margin-right: auto; 
-					width:100%; 
-					text-align:center;
-        			position: fixed;
-        			bottom: 0;
+body	{
+                text-align: center;
+}
+footer	{
+                margin-top: 10px;
+                margin-left: auto; 
+                margin-right: auto; 
+                width:100%; 
+                text-align:center;
+        position: fixed;
+        bottom: 0;
 
-			}
-       		#tab1	{
-       				float: center;
-       				text-align: center;
-       				margin: auto;
-       				width: 30%;
-       		}
+}
+#tab1	{
+                text-align: center;
+                margin: auto;
+                width: 30%;
+}
 
-       		/*#textyLave {
-       				float: left;
-       				text-align: right;
-       				width: 20%;
-       				margin-left: 10%;
-       				margin-right: 5%;
-       		}*/
-       		/*#textyPrave {
-       				float: right;
-       				text-align: left;
-       				width: 20%;
-       				margin-left: 5%;
-       				margin-right: 10%;
-       		}*/
-       		
-       		input[type="text"] {
-				    width: 30px;
-				    height: 30px;
-				    font-size: 27px;
-				    text-align: center;
-			}
-			.taj {
-					background-color: grey;
-			}
-			.cierneBunky {
-					background-color: black;
-			}
-			.krizovka {
-				margin-top:50px;
-			}
-			.buttonCheck {
-				margin-top:20px;
-			}
+/*#textyLave {
+                float: left;
+                text-align: right;
+                width: 20%;
+                margin-left: 10%;
+                margin-right: 5%;
+}*/
+/*#textyPrave {
+                float: right;
+                text-align: left;
+                width: 20%;
+                margin-left: 5%;
+                margin-right: 10%;
+}*/
+
+input[type="text"] {
+                    width: 30px;
+                    height: 30px;
+                    font-size: 27px;
+                    text-align: center;
+        }
+        .taj {
+                        background-color: grey;
+        }
+        .cierneBunky {
+                        background-color: black;
+        }
+        .krizovka {
+                margin-top:50px;
+        }
+        .buttonCheck {
+                margin-top:20px;
+        }
 
