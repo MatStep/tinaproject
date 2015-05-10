@@ -38,13 +38,13 @@ function insertCounter() {
  displayCounter();
 }
  function displayCounter() {
- document.write('<H4 ALIGN="RIGHT">');
+ document.write('<p class="footer-text">');
  document.write("Navštívil si túto stránku ");
  if(counter==1)
      document.write("po prvý krát.");
  else
      document.write(counter+" krát.");
-    document.writeln('</H4>');
+    document.writeln('</p>');
  }
 function readCookie() {
  var cookie=document.cookie;
