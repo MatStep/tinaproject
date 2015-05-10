@@ -73,6 +73,14 @@ function justReadCookie() {
 	var nvpair=chkdCookie.split(";");
 	if(nameDefined(nvpair,"pageCount"));
 	counter=parseInt(getCookieValue(nvpair,"pageCount"));
+	var futdate = new Date();
+	var expdate = futdate.getTime();
+	expdate += 3600000 * 24 *30;  //expires in 1 hour
+	futdate.setTime(expdate);
+
+	var newCookie = "pageCount=" + counter;
+	newCookie += "; expires=" + futdate.toGMTString();
+	window.document.cookie = newCookie;
 }
 	
 
