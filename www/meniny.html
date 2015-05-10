@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+	<title>TINA | Mapa</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+	<script src="https://cdn.rawgit.com/csaladenes/ddc0b326b93ec641c84f/raw/nv.d3.min.js"></script>
+
+	<script type="text/javascript" src="../scripts/meniny.js"></script>
+	<script src="../scripts/menu.js"></script>
+	<link type="text/css" rel="stylesheet" href="../css/style.css"/>
+	<link type="text/css" rel="stylesheet" href="../css/meniny.css"/>
+
+
+</head>
+<body onload="init()">
+	<header>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Meniny</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="containerMeniny">
+		<h1>Meniny</h1>
+		<hr>
+		<p id="meniny"></p>
+		<div>
+			<label for="datum">Zadajte dátum</label><br>
+			<input id="datum" class="input" type="text" name="datum"/>
+			<div  id="format"><br></div>
+		</div>
+		<input type="button" value="Nájdi" onClick="ktoMeniny()" > <br>
+		<div id="vysledok"><br></div>
+		<br>
+		<label for="meno">Zadajte meno</label><br>
+		<input id="meno" class="input" type="text" name="meno"/><br>
+		<input type="button" value="Nájdí" onClick="kedyDatum()" > <br>
+		<div id="vysledok2"><br></div>
+		<p id="dnesnyDen"></p>
+	</div>
+	<footer>
+		<div class="container">
+			<p class="footer-text">@ Jakub Jahič</p>
+		</div>
+	</footer>
+
+</body>
+</html>
