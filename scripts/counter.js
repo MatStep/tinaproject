@@ -64,3 +64,19 @@ function readCookie() {
  window.document.cookie = newCookie;
 }
 
+
+
+function justReadCookie() {
+	var cookie=document.cookie;
+	counter = 0;
+	var chkdCookie=delBlanks(cookie);  //are on the client computer
+	var nvpair=chkdCookie.split(";");
+	if(nameDefined(nvpair,"pageCount"));
+	counter=parseInt(getCookieValue(nvpair,"pageCount"));
+}
+	
+
+function dispCount(){
+	justReadCookie();
+	displayCounter();
+}
