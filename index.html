@@ -20,8 +20,9 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<script src="scripts/counter.js"></script>
 
-	<!--skripty pre index.html-->
-	<script src="libs/superscrollorama-master/js/greensock/TweenMax.min.js"></script>
+	<!--skripty pre index.html
+	<script src="libs/superscrollorama-master/js/greensock/TweenMax.min.js"></script>-->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
 	<script src="libs/superscrollorama-master/js/jquery.superscrollorama.js"></script>
 	<script src="scripts/indexJS.js"></script>
 
@@ -97,7 +98,7 @@
 
 	<div class="container game_container " >
 			<div class="col-md-4 " >
-				<div class="img_wrapper left0 pos-relative">
+				<div class="img_wrapper left0 pos-relative" id="left0">
 					<img src="images/game0.jpg" class="img_game img-rounded" alt="sudoku">
 				</div>
 			</div>
@@ -159,7 +160,7 @@
 			<div class="col-md-2"></div>
 	</div>
 
-	<div class="container game_container">
+	<div class="container game_container final-game">
 			<div class="col-md-4 ">
 				<div class="img_wrapper left4 pos-relative">
 				<img src="images/game4.png" class="img_game  img-rounded" alt="sudoku">

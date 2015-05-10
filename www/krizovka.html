@@ -1,218 +1,226 @@
 <!DOCTYPE html>
 <html lang="sk">
-	<head>
-		<title>TINA | Mapa</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-		<script src="http://code.jquery.com/jquery.js"></script>
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-		<script src="https://cdn.rawgit.com/csaladenes/ddc0b326b93ec641c84f/raw/nv.d3.min.js"></script>
+<head>
+	<title>TINA | Mapa</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+	<script src="https://cdn.rawgit.com/csaladenes/ddc0b326b93ec641c84f/raw/nv.d3.min.js"></script>
 
-		<script type="text/javascript" src="../scripts/krizovka.js"></script>
-		<script src="../scripts/menu.js"></script>
-		<link type="text/css" rel="stylesheet" href="../css/krizovka.css"/>
-		<link type="text/css" rel="stylesheet" href="../css/style.css"/>
+	<script type="text/javascript" src="../scripts/krizovka.js"></script>
+	<script src="../scripts/menu.js"></script>
+	<link type="text/css" rel="stylesheet" href="../css/krizovka.css"/>
+	<link type="text/css" rel="stylesheet" href="../css/style.css"/>
 
-	</head>
-	<body onload="init()">
-		<header>
-			<nav class="navbar navbar-default navbar-fixed-top">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="#">Krížovka</a>
-					</div>
-					<div id="navbar" class="collapse navbar-collapse">
-						<ul class="nav navbar-nav">
-						</ul>
-					</div>
+</head>
+<body onload="init()">
+	<header>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Krížovka</a>
 				</div>
-			</nav>
-		</header>
-		<div class="krizovky">
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container krizovka">
+		<h1>Krížovka</h1>
+		<hr>
+		<div class="col-md-4">
+			<p id="textyLave"></p>
+		</div>
+		<div class="col-md-4">
 			<form action="#" method="get" id="table1form" onsubmit="skontrolujTajnicku1()">
-			<table id="tab1" border="2">
-				<p id="textyLave"></p>
-				<tr>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="taj" id="tab1tr1" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-				</tr>
-				<div id="textyPrave">
-					<input id="riesenie0" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(0)"><p></p>
-				</div>
-				<tr>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="taj" id="tab1tr2" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-				</tr>
-				<div class="col-md-4" id="textyPrave">
-					<input id="riesenie1" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(1)"><p></p>
-				</div>
-				<tr>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="taj" id="tab1tr3" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-				</tr>
-				<div class="col-md-4" id="textyPrave">
-					<input id="riesenie2" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(2)"><p></p>
-				</div>
-				<tr>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="taj" id="tab1tr4" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-				</tr>
-				<div class="col-md-4" id="textyPrave">
-					<input id="riesenie3" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(3)"><p></p>
-				</div>
-				<tr>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="taj" id="tab1tr5" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-				</tr>
-				<div class="col-md-4" id="textyPrave">
-					<input id="riesenie4" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(4)"><p></p>
-				</div>
-				<tr>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="taj" id="tab1tr6" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-				</tr>
-				<div class="col-md-4" id="textyPrave">
-					<input id="riesenie5" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(5)"><p></p>
-				</div>
-				<tr>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="taj" id="tab1tr7" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-				</tr>
-				<div class="col-md-4" id="textyPrave">
-					<input id="riesenie6" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(6)"><p></p>
-				</div>
-				<tr>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="taj" id="tab1tr8" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-				</tr>
-				<div class="col-md-4" id="textyPrave">
-					<input id="riesenie7" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(7)"><p></p>
-				</div>
-				<tr>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
-					<td class="taj" id="tab1tr9" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-					<td class="cierneBunky" width="30" height="30"></td>
-				</tr>
-				<div class="col-md-4" id="textyPrave">
-					<input id="riesenie8"type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(8)"><p></p>
-				</div>
-			</table>
-			<input type="submit" value="Skontrolovať">
+				<table id="tab1" border="2">
+					<tr>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="taj" id="tab1tr1" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+					</tr>
+					<tr>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="taj" id="tab1tr2" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+					</tr>
+					<tr>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="taj" id="tab1tr3" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+					</tr>
+					<tr>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="taj" id="tab1tr4" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+					</tr>
+					<tr>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="taj" id="tab1tr5" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+					</tr>
+					<tr>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="taj" id="tab1tr6" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+					</tr>
+					<tr>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="taj" id="tab1tr7" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+					</tr>
+					<tr>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="taj" id="tab1tr8" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+					</tr>
+					<tr>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td width="30" height="30"><input type="text" form="table1form" pattern=".{1}"></td>
+						<td class="taj" id="tab1tr9" width="30" height="30"><input type="text" class="taj" form="table1form" pattern=".{1}"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+						<td class="cierneBunky" width="30" height="30"></td>
+					</tr>
+				</table>
+				<input type="submit" class="btn btn-primary buttonCheck" value="Skontrolovať">
 			</form>
 		</div>
-		<footer>
+		<div class="col-md-4">
+			<div id="textyPrave">
+				<input id="riesenie0" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(0)"><p></p>
+			</div>
+			<div id="textyPrave">
+				<input id="riesenie1" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(1)"><p></p>
+			</div>
+			<div id="textyPrave">
+				<input id="riesenie2" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(2)"><p></p>
+			</div>
+			<div id="textyPrave">
+				<input id="riesenie3" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(3)"><p></p>
+			</div>
+			<div id="textyPrave">
+				<input id="riesenie4" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(4)"><p></p>
+			</div>
+			<div id="textyPrave">
+				<input id="riesenie5" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(5)"><p></p>
+			</div>
+			<div id="textyPrave">
+				<input id="riesenie6" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(6)"><p></p>
+			</div>
+			<div id="textyPrave">
+				<input id="riesenie7" type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(7)"><p></p>
+			</div>
+			<div id="textyPrave">
+				<input id="riesenie8"type="button" value="zobrazRiesenie" onClick="zobrazRiesenie(8)"><p></p>
+			</div>
+		</div>
+	</div>
+	<footer>
 		<div class="container">
 			<p class="footer-text">@ Jakub Jahič</p>
 		</div>
 	</footer>
 
-	</body>
+</body>
 </html>
