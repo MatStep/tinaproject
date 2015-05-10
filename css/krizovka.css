@@ -18,20 +18,20 @@
        				width: 30%;
        		}
 
-       		#textyLave {
+       		/*#textyLave {
        				float: left;
        				text-align: right;
        				width: 20%;
        				margin-left: 10%;
        				margin-right: 5%;
-       		}
-       		#textyPrave {
+       		}*/
+       		/*#textyPrave {
        				float: right;
        				text-align: left;
        				width: 20%;
        				margin-left: 5%;
        				margin-right: 10%;
-       		}
+       		}*/
        		
        		input[type="text"] {
 				    width: 30px;
@@ -45,12 +45,10 @@
 			.cierneBunky {
 					background-color: black;
 			}
-			.krizovky {
-					width: 100%;
-					line-height: 1.0;
-					margin-top: 100px;
-					margin-right: auto;
-					margin-left: auto;
-
+			.krizovka {
+				margin-top:50px;
+			}
+			.buttonCheck {
+				margin-top:20px;
 			}
 
