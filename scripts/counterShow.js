@@ -8,7 +8,7 @@
 $(document).ready(function(){
 
     if (typeof(Storage) != "undefined") {
-        var counter = JSON.parse(localStorage.getItem("counter"));
+        var counter = JSON.parse(localStorage.getItem("counterTim6"));
         var tag = "<h4> Toto je tvoja " + counter + ". návšteva.</h4>"; 
         $("#footerText").append(tag);
     }
