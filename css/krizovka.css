@@ -11,10 +11,16 @@ footer	{
         bottom: 0;
 
 }
+td {
+    width: 30px; height: 30px;
+}
 #tab1	{
                 text-align: center;
                 margin: auto;
                 width: 30%;
+}
+#tab1 th, td {
+        border: 2px solid;
 }
 
 /*#textyLave {

@@ -26,7 +26,7 @@ function init(){
         aktNapovedy[j-1] = x[0].children[0].children[j].children[0].innerHTML;
         aktRiesenia[j-1] = x[0].children[0].children[j].children[1].innerHTML;
     }
-    console.log(aktNapovedy.length);
+    //console.log(aktNapovedy.length);
     //console.log(aktRiesenia);
     document.getElementById("textyLave").innerHTML = "NÁPOVEDY:" + "<br>";
     for (i=1; i<=aktNapovedy.length; i++){
