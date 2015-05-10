@@ -2,6 +2,39 @@
 	text-align: center;
 }
 
+label {
+	font-size:18px;
+}
+
+#meniny {
+	margin-bottom:20px;
+	font-size:14px;
+	padding:10px 0;
+	font-weight:bold;
+	color:#333;
+}
+
+.buttonClass {
+	width:100px;
+}
+
+#vysledok, #vysledok2 {
+	margin:10px 0;
+}
+
+#dnesnyDen {
+	font-size:16px;
+}
+
+.divDen {
+	font-size: 16px;
+	position: absolute;
+	text-align: center;
+	bottom: 60px;
+	margin: 0px auto;
+	width:100%;
+}
+
 #format {
 	color: grey;
 }

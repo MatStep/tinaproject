@@ -11,7 +11,7 @@
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 	<script src="https://cdn.rawgit.com/csaladenes/ddc0b326b93ec641c84f/raw/nv.d3.min.js"></script>
-
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="../scripts/meniny.js"></script>
 	<script src="../scripts/menu.js"></script>
 	<link type="text/css" rel="stylesheet" href="../css/style.css"/>
@@ -40,24 +40,35 @@
 			</div>
 		</nav>
 	</header>
-	<div class="containerMeniny">
+	<div class="container containerMeniny">
 		<h1>Meniny</h1>
 		<hr>
-		<p id="meniny"></p>
-		<div>
-			<label for="datum">Zadajte dátum</label><br>
-			<input id="datum" class="input" type="text" name="datum"/>
-			<div  id="format"><br></div>
+		<p id="meniny" class="bg-info"></p>
+		<div class="row form-inline">
+			<div class="col-md-4 col-xs-4"></div>
+			<div class="form-group col-md-4 col-xs-4">
+				<label for="datum">Zadajte dátum</label><br>
+				<input id="datum" class="input form-control" type="text" name="datum" placeholder="Formát: dd.mm."/>
+				<input type="button" class="btn btn-primary buttonClass" value="Nájdi" onClick="ktoMeniny()" > <br>
+				<div id="vysledok"><br></div>
+			</div>
+			<div class="col-md-4 col-xs-4"></div>
 		</div>
-		<input type="button" value="Nájdi" onClick="ktoMeniny()" > <br>
-		<div id="vysledok"><br></div>
-		<br>
-		<label for="meno">Zadajte meno</label><br>
-		<input id="meno" class="input" type="text" name="meno"/><br>
-		<input type="button" value="Nájdí" onClick="kedyDatum()" > <br>
-		<div id="vysledok2"><br></div>
-		<p id="dnesnyDen"></p>
+		<!-- <div  id="format"><br></div> -->
+		<div class="row form-inline">
+			<div class="col-md-4 col-xs-4"></div>
+			<div class="form-group col-md-4 col-xs-4">
+				<label for="meno">Zadajte meno</label><br>
+				<input id="meno" class="input form-control" type="text" name="meno" placeholder="Meno"/>
+				<input type="button" class="btn btn-primary buttonClass" value="Nájdí" onClick="kedyDatum()" > <br>
+				<div id="vysledok2"><br></div>
+			</div>
+			<div class="col-md-4 col-xs-4"></div>
+		</div>
 	</div>
+	<div class="divDen">
+			<p id="dnesnyDen" class="text-info"></p>
+		</div>
 	<footer>
             <div class="container row">
             <div class="col-md-6 col-xs-6">
